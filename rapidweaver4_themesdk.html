@@ -3,19 +3,19 @@
 <h2>Realmac Software Theme Tutorial: Table of Contents</h2>
 
 <ul>
-<li><a href="#sect1" title="RapidWeaver 4.0 Theme Tutorial"><strong>RapidWeaver 4.0 Theme Tutorial</strong></a>
+<li><a href="#sect1"><strong>RapidWeaver 4.0 Theme Tutorial</strong></a>
 <ul>
-<li><a href="#sect11" title="Requirements">Requirements</a></li>
-<li><a href="#sect12" title="Before you start">Before you start</a></li>
+<li><a href="#sect11">Requirements</a></li>
+<li><a href="#sect12">Before you start</a></li>
 </ul></li>
-<li><a href="#sect2" title="Installing Your Theme">Installing Your Theme</a>
+<li><a href="#sect2">Installing Your Theme</a>
 <ul>
-<li><a href="#sect21" title="Access The Files">Access The Files</a></li>
+<li><a href="#sect21">Access The Files</a></li>
 </ul></li>
-<li><a href="#sect3" title="The Basics"><strong>The Basics</strong></a></li>
-<li><a href="#sect30" title="HTML">HTML</a>
+<li><a href="#sect3"><strong>The Basics</strong></a></li>
+<li><a href="#sect30">HTML</a>
 <ul>
-<li><a href="#sect31" title="Semantics">Semantics</a></li>
+<li><a href="#sect31">Semantics</a></li>
 <li>Tags</li>
 <li>Attributes</li>
 <li>ID's and Classes</li>
@@ -73,11 +73,11 @@
 </ul></li>
 </ul>
 
-<h2><a name="#sect1"></a>RapidWeaver 4.0 Theme Tutorial</h2>
+<h2><a name="#sect1">RapidWeaver 4.0 Theme Tutorial</a></h2>
 
 <p>Welcome to the Realmac Software Theme SDK, the aim of this tutorial is to give you a basic understanding of how you can build a unique theme for RapidWeaver. You'll learn about theme syntax, the property list file and how it controls your theme, how themes are structured and some basic styling.</p>
 
-<h3><a name="#sect11"></a>Requirements</h3>
+<h3><a name="#sect11">Requirements</a></h3>
 
 <ul>
 <li>RapidWeaver 4.0 or newer (RapidWeaver 3.6 is available for those not using Leopard)</li>
@@ -147,11 +147,11 @@
 <pre><code>&lt;a href=”http://www.realmacsoftware.com” title=”Visit the Realmac Homepage”&gt;Visit the Realmac Homepage&lt;/a&gt;
 </code></pre>
 
-<p>Notice the <strong>href</strong> and <strong>title</strong> inside the <a> tag. The href specifies the url the link is to go to, the title attribute gives a textual description of the urls destination.</p>
+<p>Notice the <strong>href</strong> and <strong>title</strong> inside the &lt;a&gt; tag. The href specifies the url the link is to go to, the title attribute gives a textual description of the urls destination.</p>
 
 <h4>ID's and Classes</h4>
 
-<p>A couple of other important attributes are ID’s and Classes these can be used to assign meaning to certain parts of your page. More importantly they are used alongside CSS to specify specific areas for styling. A list of links that you wish to use for navigation could be marked up as follows;</p>
+<p>A couple of other important attributes are ID's and Classes these can be used to assign meaning to certain parts of your page. More importantly they are used alongside CSS to specify specific areas for styling. A list of links that you wish to use for navigation could be marked up as follows;</p>
 
 <pre><code>&lt;ul id=”navigation”&gt;
     &lt;li&gt;&lt;a href=”page1.html”&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -166,7 +166,7 @@
 
 <p>Finally the last section of this chapter focus' on &lt;div&gt; and &lt;span&gt; tags, &lt;div&gt;'s especially are used quite frequently in the theme template. A &lt;div&gt; is a block element, this means that any content inside the tag will be moved onto a new line and automatically take up the full width of the page, just like a &lt;p&gt; or &lt;h1&gt; tag.</p>
 
-<p>A <span> is an inline element, this does not disrupt the flow of the page but instead will flow with the text in the same way as &lt;b&gt;, &lt;i&gt; or &lt;a&gt; tags.</p>
+<p>A &lt;span&gt; is an inline element, this does not disrupt the flow of the page but instead will flow with the text in the same way as &lt;b&gt;, &lt;i&gt; or &lt;a&gt; tags.</p>
 
 <p>Whilst not having a great amount of semantic meaning, &lt;div&gt;'s can be used to mark out areas of your site to allow easy styling with CSS. For example the following image illustrates a common site layout. One which we will use in the tutorial. It can be broken down into five distinct areas;</p>
 
@@ -194,15 +194,15 @@
 
 <h4>Basic Page Structure</h4>
 
-<p>Now we have seen how <div>'s can be used to mark out the content areas of the page we can focus on how this is inserted into a working <strong>.html</strong> page that can be viewed by a browser.</p>
+<p>Now we have seen how &lt;div&gt;'s can be used to mark out the content areas of the page we can focus on how this is inserted into a working <strong>.html</strong> page that can be viewed by a browser.</p>
 
-<p>There are two main areas of an <strong>XHTML</strong> document, the <head>, which contains all the information required before the page loads such as page title and stylesheets. Second is the <body> this contains anything you wish to be visible to the user.</p>
+<p>There are two main areas of an <strong>XHTML</strong> document, the &lt;head&gt;, which contains all the information required before the page loads such as page title and stylesheets. Second is the &lt;body&gt; this contains anything you wish to be visible to the user.</p>
 
-<p>The <body> and <head> tags are wrapped in an <html> tag, this tells the browser that we want to render the page as <html>. All of this is preceded by a <DOCTYPE> declaration. This statement tells the browser that we would like our page to be rendered as valid XHTML. By ensuring our page validates we can ensure that the page will display as intended across all modern browsers.</p>
+<p>The &lt;body&gt; and &lt;head&gt; tags are wrapped in an &lt;html&gt; tag, this tells the browser that we want to render the page as &lt;html&gt;. All of this is preceded by a &lt;DOCTYPE&gt; declaration. This statement tells the browser that we would like our page to be rendered as valid XHTML. By ensuring our page validates we can ensure that the page will display as intended across all modern browsers.</p>
 
 <p>The code on the following page illustrates the standard mark-up for a basic <strong>XHTML</strong> page including our seg- mented page layout.</p>
 
-<p>The observant among you may have noticed a <link> tag in the <head>, this imports all of our styles into our page. We will cover this in greater detail later in the tutorial.</p>
+<p>The observant among you may have noticed a &lt;link&gt; tag in the &lt;head&gt;, this imports all of our styles into our page. We will cover this in greater detail later in the tutorial.</p>
 
 <pre><code>￼&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”&gt;
 &lt;html xmlns=”http://www.w3.org/1999/xhtml”&gt;
@@ -249,7 +249,7 @@
 
 <p>This statement styles all paragraph text blue, bold and has a font size of 20px. Properties end in a colon and values a semi-colon.</p>
 
-<p>You may have noticed from the previous examples that <strong>CSS</strong> communicates with your <strong>XHTML</strong> content using the markup tags for example <body>, <p> or <a>.</p>
+<p>You may have noticed from the previous examples that <strong>CSS</strong> communicates with your <strong>XHTML</strong> content using the markup tags for example &lt;body&gt;, &lt;p&gt; or &lt;a&gt;.</p>
 
 <h4>Global Selectors</h4>
 
@@ -295,12 +295,12 @@
 
 <p>This simply means that the the <strong>CSS</strong> should style the element with the <strong>ID</strong> of content inside the element with the <strong>ID</strong> of #contentContainer. This is a useful way of targeting elements without having to give every element of your website and individual <strong>class</strong> or <strong>ID</strong>.</p>
 
-<p>Another example would be selecting all anchor elements <a> inside paragraphs <p> in the sidebar perhaps to make them a different colour from other anchors in the page.
+<p>Another example would be selecting all anchor elements &lt;a&gt; inside paragraphs &lt;p&gt; in the sidebar perhaps to make them a different colour from other anchors in the page.
     #sidebar p a {...}</p>
 
 <h4>Linking the styles.css file to index.html</h4>
 
-<p>In order for the browser to find our stylesheets we need to link the <strong>styles.css</strong> to the <strong>index.html</strong> file. This can be done with the <link> tags inserted in the document <head> if you look at the example in the previous chap- ter you will see the <link> after the <title> tag.</p>
+<p>In order for the browser to find our stylesheets we need to link the <strong>styles.css</strong> to the <strong>index.html</strong> file. This can be done with the &lt;link&gt; tags inserted in the document &lt;head&gt; if you look at the example in the previous chapter you will see the &lt;link&gt; after the &lt;title&gt; tag.</p>
 
 <pre><code>￼&lt;link href=”%pathto(styles.css)%” rel=”stylesheet” type=”text/css” media=”screen”  /&gt;
 </code></pre>
@@ -356,7 +356,7 @@
 &lt;/html&gt;
 </code></pre>
 
-<p>The main content areas are distinguished by <div> elements, each open and close tag contains a <strong>Syntax Tag</strong>. For example.</p>
+<p>The main content areas are distinguished by &lt;div&gt; elements, each open and close tag contains a <strong>Syntax Tag</strong>. For example.</p>
 
 <pre><code>&lt;div id=”content”&gt;%content%&lt;/div&gt;
 </code></pre>

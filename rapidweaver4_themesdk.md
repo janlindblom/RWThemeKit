@@ -1,14 +1,14 @@
 # RapidWeaver 4 Theme SDK
 
 ## Realmac Software Theme Tutorial: Table of Contents
-* [**RapidWeaver 4.0 Theme Tutorial**][sect1]
- * [Requirements][sect11]
- * [Before you start][sect12]
-* [Installing Your Theme][sect2]
- * [Access The Files][sect21]
-* [**The Basics**][sect3]
-* [HTML][sect30]
- * [Semantics][sect31]
+* [**RapidWeaver 4.0 Theme Tutorial**](#sect1)
+ * [Requirements](#sect11)
+ * [Before you start](#sect12)
+* [Installing Your Theme](#sect2)
+ * [Access The Files](#sect21)
+* [**The Basics**](#sect3)
+* [HTML](#sect30)
+ * [Semantics](#sect31)
  * Tags
  * Attributes
  * ID's and Classes
@@ -59,10 +59,10 @@
 [sect30]: <#sect30> "HTML"
 [sect31]: <#sect31> "Semantics"
 
-## <a name="#sect1"></a>RapidWeaver 4.0 Theme Tutorial
+## <a name="#sect1">RapidWeaver 4.0 Theme Tutorial</a>
 Welcome to the Realmac Software Theme SDK, the aim of this tutorial is to give you a basic understanding of how you can build a unique theme for RapidWeaver. You'll learn about theme syntax, the property list file and how it controls your theme, how themes are structured and some basic styling.
 
-### <a name="#sect11"></a>Requirements
+### <a name="#sect11">Requirements</a>
 * RapidWeaver 4.0 or newer (RapidWeaver 3.6 is available for those not using Leopard)
 * A text editor (TextWrangler or similar)
 * A CSS Editor (CSSEdit or similar) recommended
@@ -244,11 +244,11 @@ When you look at the **styles.css** document you may notice that there are entri
 
 This simply means that the the **CSS** should style the element with the **ID** of content inside the element with the **ID** of #contentContainer. This is a useful way of targeting elements without having to give every element of your website and individual **class** or **ID**.
 
-Another example would be selecting all anchor elements <a> inside paragraphs <p> in the sidebar perhaps to make them a different colour from other anchors in the page.
+Another example would be selecting all anchor elements &lt;a&gt; inside paragraphs &lt;p&gt; in the sidebar perhaps to make them a different colour from other anchors in the page.
 	#sidebar p a {...}
 
 #### Linking the styles.css file to index.html
-In order for the browser to find our stylesheets we need to link the **styles.css** to the **index.html** file. This can be done with the <link> tags inserted in the document <head> if you look at the example in the previous chap- ter you will see the <link> after the <title> tag.
+In order for the browser to find our stylesheets we need to link the **styles.css** to the **index.html** file. This can be done with the &lt;link&gt; tags inserted in the document &lt;head&gt; if you look at the example in the previous chapter you will see the &lt;link&gt; after the &lt;title&gt; tag.
 
 	￼<link href=”%pathto(styles.css)%” rel=”stylesheet” type=”text/css” media=”screen”  />
 
@@ -299,7 +299,7 @@ The basic layout of the page should by now be familiar;
 		</body>
 	</html>
 
-The main content areas are distinguished by <div> elements, each open and close tag contains a **Syntax Tag**. For example.
+The main content areas are distinguished by &lt;div&gt; elements, each open and close tag contains a **Syntax Tag**. For example.
 
 	<div id=”content”>%content%</div>
 
