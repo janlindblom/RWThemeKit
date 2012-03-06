@@ -1,0 +1,372 @@
+<h1>RapidWeaver 4 Theme SDK</h1>
+
+<h2>Realmac Software Theme Tutorial: Table of Contents</h2>
+
+<ul>
+<li><a href="#sect1" title="RapidWeaver 4.0 Theme Tutorial"><strong>RapidWeaver 4.0 Theme Tutorial</strong></a>
+<ul>
+<li><a href="#sect11" title="Requirements">Requirements</a></li>
+<li><a href="#sect12" title="Before you start">Before you start</a></li>
+</ul></li>
+<li><a href="#sect2" title="Installing Your Theme">Installing Your Theme</a>
+<ul>
+<li><a href="#sect21" title="Access The Files">Access The Files</a></li>
+</ul></li>
+<li><a href="#sect3" title="The Basics"><strong>The Basics</strong></a></li>
+<li><a href="#sect30" title="HTML">HTML</a>
+<ul>
+<li><a href="#sect31" title="Semantics">Semantics</a></li>
+<li>Tags</li>
+<li>Attributes</li>
+<li>ID's and Classes</li>
+<li>Div's and Span's</li>
+<li>Basic Page Structure</li>
+<li>Summary</li>
+</ul></li>
+<li>CSS
+<ul>
+<li>CSS Selectors</li>
+<li>Global Selectors</li>
+<li>Class Selectors</li>
+<li>ID Selectors</li>
+<li>Nested Styles</li>
+<li>Linking the styles.css file to index.html</li>
+<li>Summary</li>
+</ul></li>
+<li><strong>Rapidweaver Templates</strong>
+<ul>
+<li>The index.html file</li>
+<li>Document Structure</li>
+</ul></li>
+<li>RapidWeaver Syntax Tags
+<ul>
+<li>The %pathto(...)% Tag</li>
+</ul></li>
+<li>CSS Selectors and the index.html file
+<ul>
+<li>Linking the styles.css file to index.html</li>
+</ul></li>
+<li><strong>Styling Your Theme</strong>
+<ul>
+<li>Common Styling</li>
+<li>Link Styling</li>
+<li>Site Width</li>
+<li>Content and Sidebar</li>
+<li>Clearers</li>
+<li>Content Padding</li>
+<li>Page Header</li>
+<li>Title and slogan</li>
+<li>Navigation Styling</li>
+<li>Default Styles</li>
+<li>Current Link Styling</li>
+<li>Footer Styling</li>
+<li>Applying a background image</li>
+<li>Adding A Theme Preview</li>
+</ul></li>
+<li>Conclusion
+<ul>
+<li>Useful CSS Links</li>
+</ul></li>
+<li>Appendix
+<ul>
+<li>SDK Appendix</li>
+</ul></li>
+</ul>
+
+<h2><a name="#sect1"></a>RapidWeaver 4.0 Theme Tutorial</h2>
+
+<p>Welcome to the Realmac Software Theme SDK, the aim of this tutorial is to give you a basic understanding of how you can build a unique theme for RapidWeaver. You'll learn about theme syntax, the property list file and how it controls your theme, how themes are structured and some basic styling.</p>
+
+<h3><a name="#sect11"></a>Requirements</h3>
+
+<ul>
+<li>RapidWeaver 4.0 or newer (RapidWeaver 3.6 is available for those not using Leopard)</li>
+<li>A text editor (TextWrangler or similar)</li>
+<li>A CSS Editor (CSSEdit or similar) recommended</li>
+<li>Skill Level: RapidWeaver / Web enthusiast. Basic XHTML and CSS knowledge an advantage.</li>
+<li>Objectives: To gain an understanding of how RapidWeaver themes are constructed and learn some basic CSS styling for the theme.</li>
+<li>Time: 1 - 2 hours depending on skill level.</li>
+</ul>
+
+<h3><a name="#sect12"></a>Before you start</h3>
+
+<p>Before you start you need to make sure you have RapidWeaver 4.0 or newer installed. You can download the latest version of RapidWeaver from <a href="http://www.realmacsoftware.com">http://www.realmacsoftware.com</a>. This tutorial has been designed and written for 4.0, however it is perfectly apt for use with 3.6 as the theme structure and development process is identical.</p>
+
+<p>You'll also need a text editor, TextWrangler from Bare Bones Software (<a href="http://www.barebones.com">http://www.barebones.com</a>) is free and provides syntax highlighting which makes reading large amounts of code infinitely easier. Alternatively you can use TextEdit which is shipped with the Mac.</p>
+
+<p>Finally a good CSS editor will also come in very useful. I recommend you buy a license for CSSEdit from MacRabbit <a href="http://macrabbit.com">http://macrabbit.com</a>, it's not essential but it makes CSS coding a breeze!</p>
+
+<p>With everything in place, let's get started...</p>
+
+<h2>Installing Your Theme</h2>
+
+<p>Install the Tutorial.rwtheme file by double-clicking it. You then need to restart RapidWeaver for the theme to become active.</p>
+
+<h3>Access The Files</h3>
+
+<p>Once you have the theme installed, open the Tutorial Site project file by double clicking it, once RapidWeaver has loaded choose the tutorial theme from the theme drawer. Right click on the theme preview and select Show Contents.</p>
+
+<p>This will reveal a Contents folder in the finder, inside are all the files required to construct a RapidWeaver theme. You should have the following files:</p>
+
+<ul>
+<li><strong>index.html</strong> - layout template file (XHTML) </li>
+<li><strong>styles.css</strong> - base stylesheet (CSS) </li>
+<li><strong>colourtag.css</strong> - colour style variations stylesheet (CSS) </li>
+<li><strong>print.css</strong> - print stylesheet, styles the layout of your page when printed (CSS) </li>
+<li><strong>handheld.css</strong> - handheld device, styles the layout of your page when viewed on a mobile device (CSS) </li>
+<li><strong>javascript.js</strong> - required javascript for the theme </li>
+<li><strong>images</strong> - where all images for the theme are placed </li>
+<li><strong>css folder</strong> - theme variations CSS files are placed in here, such as sidebar location, page-width etc. </li>
+<li><strong>preview.png</strong> - 115x125px image/logo of your theme displayed in the theme drawer. (Version 3.6 and under)</li>
+<li><strong>preview_large.jpg</strong> - 800x950px image/logo of your theme displayed in the theme drawer. (version 4.0 and up)</li>
+</ul>
+
+<h2>The Basics</h2>
+
+<p>Firstly before we begin any work on the theme it is important to understand the fundamentals of a website. This chapter will cover basic XHTML and CSS as well as the general workings of a webpage. If you are comfortable with these areas then you may wish to skip this chapter.</p>
+
+<h3>HTML</h3>
+
+<h4>Semantics</h4>
+
+<p>When designing any webpage it is important to use valid XHTML your .html pages should contain all the vital information you wish to communicate to your viewer. All other code such as styling and javascript should be contained in external files and linked into your document. The idea behind this is to ensure that if your page was viewed with no styling it reads easily and clearly.</p>
+
+<h4>Tags</h4>
+
+<p>HTML uses tags to mark up areas of the page to ensure the browser reads it correctly. For example a &lt;h1&gt; tag denotes a heading, this will be displayed more prominently on the page with a larger bold font.</p>
+
+<p>Tags nearly always have both opening - &lt;p&gt; - and closing - &lt;/p&gt; -mark-up, closing tags are prefixed with a forward slash /. For example a paragraph will be displayed as follows. </p>
+
+<pre><code>&lt;p&gt;This is a paragraph!&lt;/p&gt;
+</code></pre>
+
+<h4>Attributes</h4>
+
+<p>Tags can also be assigned attributes, these reside inside the opening tag and can be used to assign extra information to your code. For example a link can be marked up as follows.</p>
+
+<pre><code>&lt;a href=”http://www.realmacsoftware.com” title=”Visit the Realmac Homepage”&gt;Visit the Realmac Homepage&lt;/a&gt;
+</code></pre>
+
+<p>Notice the <strong>href</strong> and <strong>title</strong> inside the <a> tag. The href specifies the url the link is to go to, the title attribute gives a textual description of the urls destination.</p>
+
+<h4>ID's and Classes</h4>
+
+<p>A couple of other important attributes are ID’s and Classes these can be used to assign meaning to certain parts of your page. More importantly they are used alongside CSS to specify specific areas for styling. A list of links that you wish to use for navigation could be marked up as follows;</p>
+
+<pre><code>&lt;ul id=”navigation”&gt;
+    &lt;li&gt;&lt;a href=”page1.html”&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=”page2.html”&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=”page3.html”&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>Don’t worry too much if this doesn't make sense just yet, we will return to this in the tutorial.</p>
+
+<h4>Div's and Span's</h4>
+
+<p>Finally the last section of this chapter focus' on &lt;div&gt; and &lt;span&gt; tags, &lt;div&gt;'s especially are used quite frequently in the theme template. A &lt;div&gt; is a block element, this means that any content inside the tag will be moved onto a new line and automatically take up the full width of the page, just like a &lt;p&gt; or &lt;h1&gt; tag.</p>
+
+<p>A <span> is an inline element, this does not disrupt the flow of the page but instead will flow with the text in the same way as &lt;b&gt;, &lt;i&gt; or &lt;a&gt; tags.</p>
+
+<p>Whilst not having a great amount of semantic meaning, &lt;div&gt;'s can be used to mark out areas of your site to allow easy styling with CSS. For example the following image illustrates a common site layout. One which we will use in the tutorial. It can be broken down into five distinct areas;</p>
+
+<ul>
+<li>Container</li>
+<li>Page</li>
+<li>Header</li>
+<li>Content</li>
+<li>Sidebar</li>
+<li>Footer</li>
+</ul>
+
+<p>[[ figure 1]]</p>
+
+<p>These can be marked out accordingly with XHTML;
+￼
+    <div id=”container”>
+        <div id=”header”>Header </div>
+        <div id=”content”>Content</div>
+        <div id=”sidebar”>Sidebar</div>
+        <div id=”footer”>Footer</div>
+    </div></p>
+
+<p>Notice the four distinct sections are wrapped in an outer container, this make it easier to set an overall site width. <strong>ID</strong> attributes are also used to identify the regions.</p>
+
+<h4>Basic Page Structure</h4>
+
+<p>Now we have seen how <div>'s can be used to mark out the content areas of the page we can focus on how this is inserted into a working <strong>.html</strong> page that can be viewed by a browser.</p>
+
+<p>There are two main areas of an <strong>XHTML</strong> document, the <head>, which contains all the information required before the page loads such as page title and stylesheets. Second is the <body> this contains anything you wish to be visible to the user.</p>
+
+<p>The <body> and <head> tags are wrapped in an <html> tag, this tells the browser that we want to render the page as <html>. All of this is preceded by a <DOCTYPE> declaration. This statement tells the browser that we would like our page to be rendered as valid XHTML. By ensuring our page validates we can ensure that the page will display as intended across all modern browsers.</p>
+
+<p>The code on the following page illustrates the standard mark-up for a basic <strong>XHTML</strong> page including our seg- mented page layout.</p>
+
+<p>The observant among you may have noticed a <link> tag in the <head>, this imports all of our styles into our page. We will cover this in greater detail later in the tutorial.</p>
+
+<pre><code>￼&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”&gt;
+&lt;html xmlns=”http://www.w3.org/1999/xhtml”&gt;
+    &lt;head&gt;
+        &lt;title&gt;This is the Page Title&lt;/title&gt;
+        &lt;link href=”styles.css” rel=”stylesheet” type=”text/css” media=”screen” /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=”container”&gt;
+            &lt;div id=”header”&gt;Header &lt;/div&gt;
+            &lt;div id=”content”&gt;Content&lt;/div&gt;
+            &lt;div id=”sidebar”&gt;Sidebar&lt;/div&gt;
+            &lt;div id=”footer”&gt;Footer&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h4>Summary</h4>
+
+<p>This has been a <strong>VERY</strong> quick overview of <strong>XHTML</strong> and its structure, hopefully however it will make the <strong>index</strong>. html template for the theme clearer. The next chapter will cover the basics of <strong>CSS</strong> and styling a webpage.</p>
+
+<h3>CSS</h3>
+
+<p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong> and is widely used by all modern web designers to style webpages. It allows for an incredible level of flexibility to be applied to your site and once understood is very simple to use.</p>
+
+<h4>CSS Selectors</h4>
+
+<p>A <strong>CSS</strong> statement is formed in three parts, the <strong>selector</strong>, the <strong>property</strong> and a <strong>value</strong>.</p>
+
+<pre><code>body { color: red; }
+</code></pre>
+
+<p>Here body is the <strong>selector</strong>, color the <strong>attribute</strong> and red the <strong>value</strong>. This command will style the color of all of the text on the page red. Simple.</p>
+
+<p>A selector can have as many properties as you wish. These are wrapped in curly braces.</p>
+
+<pre><code>￼p {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+</code></pre>
+
+<p>This statement styles all paragraph text blue, bold and has a font size of 20px. Properties end in a colon and values a semi-colon.</p>
+
+<p>You may have noticed from the previous examples that <strong>CSS</strong> communicates with your <strong>XHTML</strong> content using the markup tags for example <body>, <p> or <a>.</p>
+
+<h4>Global Selectors</h4>
+
+<p>Any tag within the <body> of your document can be styled with <strong>CSS</strong>. For example.</p>
+
+<pre><code>a { font-weight: bold; }
+</code></pre>
+
+<p>All of the anchor tags in your page will now be bold.</p>
+
+<h4>Class Selectors</h4>
+
+<p>We may want to select only specific parts of our webpage for styling. For example we may want certain paragraphs in out document to be a different colour to the main text.</p>
+
+<p>We looked at the class attribute in the previous chapter, now can see how it can be used to select only specific tags. For example in our <strong>XHTML</strong> document we can enter;</p>
+
+<pre><code>￼&lt;p class=”important”&gt;This paragraph is more important than the others.&lt;/p&gt;
+</code></pre>
+
+<p>Using <strong>CSS</strong> we can then select all elements with the class=”important” attribute. Classes in <strong>CSS</strong> are preceded by a “.” (period).
+    .important { color: red; }</p>
+
+<h4>ID Selectors</h4>
+
+<p>General and class selectors can apply to many tags within your document, the third type will select only one instance. This is the ID attribute again it was used in the previous chapter to define our page container, header, content, sidebar and footer.</p>
+
+<pre><code>￼&lt;div id=”container”&gt;Page content will be inserted between these tags.&lt;/div&gt;
+</code></pre>
+
+<p><strong>CSS</strong> uses a # to identify <strong>ID</strong> attributes.</p>
+
+<pre><code>#container {width: 800px;}
+</code></pre>
+
+<p>This will set the width of our page to 800px.</p>
+
+<h4>Nested Styles</h4>
+
+<p>When you look at the <strong>styles.css</strong> document you may notice that there are entries that have more than one selector. For example.</p>
+
+<pre><code>#contentContainer #content {...}
+</code></pre>
+
+<p>This simply means that the the <strong>CSS</strong> should style the element with the <strong>ID</strong> of content inside the element with the <strong>ID</strong> of #contentContainer. This is a useful way of targeting elements without having to give every element of your website and individual <strong>class</strong> or <strong>ID</strong>.</p>
+
+<p>Another example would be selecting all anchor elements <a> inside paragraphs <p> in the sidebar perhaps to make them a different colour from other anchors in the page.
+    #sidebar p a {...}</p>
+
+<h4>Linking the styles.css file to index.html</h4>
+
+<p>In order for the browser to find our stylesheets we need to link the <strong>styles.css</strong> to the <strong>index.html</strong> file. This can be done with the <link> tags inserted in the document <head> if you look at the example in the previous chap- ter you will see the <link> after the <title> tag.</p>
+
+<pre><code>￼&lt;link href=”%pathto(styles.css)%” rel=”stylesheet” type=”text/css” media=”screen”  /&gt;
+</code></pre>
+
+<p>This link tells the browser where to locate the styles.css file and will load it accordingly.</p>
+
+<h4>Summary</h4>
+
+<p>Again this chapter has quickly outlined the basics of CSS and how it can be applied to a document, it may be worth your time creating an index.html file containing a basic site layout and linking it to a styles.css file. Then add some basic HTML to the page and try styling some tags, classes and ID's to get a feel of how it works.</p>
+
+<p>The next chapter covers the RapidWeaver specific tags used by the program to generate the final webpages.</p>
+
+<h2>Rapidweaver Templates</h2>
+
+<h3>The index.html file</h3>
+
+<p>The <strong>index.html</strong> file contained in the theme folder is the framework for all your other pages to be generated from. Open <strong>index.html</strong> in your text editor and you'll see that it is a standard <strong>XHTML</strong> page as described in the previous chapter but it also includes numerous RapidWeaver <strong>Syntax Tags</strong>.</p>
+
+<h3>Document Structure</h3>
+
+<p>The themes <strong>index.html</strong> file follows a familiar structure that is common in nearly all modern webpages. This section aims to familiarise you with the template document.</p>
+
+<p>The basic layout of the page should by now be familiar;</p>
+
+<pre><code>&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”&gt;
+&lt;html xmlns=”http://www.w3.org/1999/xhtml”&gt;
+    &lt;head&gt;
+        &lt;title&gt;This is the Page Title&lt;/title&gt;
+        &lt;link href=”styles.css” rel=”stylesheet” type=”text/css” media=”screen” /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=”container”&gt;
+            &lt;div id=”pageHeader”&gt;
+                &lt;h1&gt;%site_title%&lt;/h1&gt;
+                &lt;h2&gt;%site_slogan%&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div id=”contentContainer”&gt;
+                &lt;div id=”content”&gt;
+                    Content
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=”sidebarContainer”&gt;
+                &lt;div id=”navcontainer”&gt;
+                    %toolbar%
+                &lt;/div&gt;
+                &lt;div id=”sidebar”&gt;
+                    %sidebar%
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=”footer”&gt;Footer&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>The main content areas are distinguished by <div> elements, each open and close tag contains a <strong>Syntax Tag</strong>. For example.</p>
+
+<pre><code>&lt;div id=”content”&gt;%content%&lt;/div&gt;
+</code></pre>
+
+<p>The majority of the syntax tags relate directly back to a text area in RapidWeaver, it should be pretty obvious which tag corresponds to which area but there is a definition list in the <strong>RapidWeaver Theme Syntax</strong> chapter located in the appendix at the end of this document<a href="#fn1" title="Footnote 1">[1]</a>.</p>
+
+<p>We have tried to comment <strong>index.html</strong> document in the <strong>tutorial.rwtheme</strong> file to make it as clear as possible where your content is inserted by RapidWeaver.</p>
+
+<h2>Footnotes</h2>
+
+<ol>
+<li><a name="fn1"></a>Some tags like the %plugin_sidebar% are there for code to be entered by page plugins such as the blog and thus have no user text input.</li>
+</ol>

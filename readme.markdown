@@ -1,5 +1,6 @@
-#RWThemeKit SDK v0.1
-##Created by Nik Fletcher, Monday 29th November 2010
+# RWThemeKit SDK v0.2
+## Created by Nik Fletcher, Monday 29th November 2010
+## Markdown version by Jan Lindblom, Tuesdag 6th March 2012
 
 As of the current HEAD, the SDK consists of two files:
 
