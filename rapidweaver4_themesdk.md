@@ -1,14 +1,15 @@
 # RapidWeaver 4 Theme SDK
 
 ## Realmac Software Theme Tutorial: Table of Contents
-* [**RapidWeaver 4.0 Theme Tutorial**](#sect1)
- * [Requirements](#sect11)
- * [Before you start](#sect12)
-* [Installing Your Theme](#sect2)
- * [Access The Files](#sect21)
-* [**The Basics**](#sect3)
-* [HTML](#sect30)
- * [Semantics](#sect31)
+
+1. **RapidWeaver 4.0 Theme Tutorial**
+ * Requirements
+ * Before you start
+* Installing Your Theme
+ * Access The Files
+2. **The Basics**
+* HTML
+ * Semantics
  * Tags
  * Attributes
  * ID's and Classes
@@ -23,14 +24,14 @@
  * Nested Styles
  * Linking the styles.css file to index.html
  * Summary
-* **Rapidweaver Templates**
+3. **Rapidweaver Templates**
  * The index.html file
  * Document Structure
 * RapidWeaver Syntax Tags
  * The %pathto(...)% Tag
 * CSS Selectors and the index.html file
  * Linking the styles.css file to index.html
-* **Styling Your Theme**
+4. **Styling Your Theme**
  * Common Styling
  * Link Styling
  * Site Width
@@ -45,24 +46,15 @@
  * Footer Styling
  * Applying a background image
  * Adding A Theme Preview
-* Conclusion
+5. Conclusion
  * Useful CSS Links
-* Appendix
+6. Appendix
  * SDK Appendix
 
-[sect1]: <#sect1> "RapidWeaver 4.0 Theme Tutorial"
-[sect11]: <#sect11> "Requirements"
-[sect12]: <#sect12> "Before you start"
-[sect2]: <#sect2> "Installing Your Theme"
-[sect21]: <#sect21> "Access The Files"
-[sect3]: <#sect3> "The Basics"
-[sect30]: <#sect30> "HTML"
-[sect31]: <#sect31> "Semantics"
-
-## <a name="#sect1">RapidWeaver 4.0 Theme Tutorial</a>
+## RapidWeaver 4.0 Theme Tutorial
 Welcome to the Realmac Software Theme SDK, the aim of this tutorial is to give you a basic understanding of how you can build a unique theme for RapidWeaver. You'll learn about theme syntax, the property list file and how it controls your theme, how themes are structured and some basic styling.
 
-### <a name="#sect11">Requirements</a>
+### Requirements
 * RapidWeaver 4.0 or newer (RapidWeaver 3.6 is available for those not using Leopard)
 * A text editor (TextWrangler or similar)
 * A CSS Editor (CSSEdit or similar) recommended
@@ -70,7 +62,7 @@ Welcome to the Realmac Software Theme SDK, the aim of this tutorial is to give y
 * Objectives: To gain an understanding of how RapidWeaver themes are constructed and learn some basic CSS styling for the theme.
 * Time: 1 - 2 hours depending on skill level.
 
-### <a name="#sect12"></a>Before you start
+### Before you start
 Before you start you need to make sure you have RapidWeaver 4.0 or newer installed. You can download the latest version of RapidWeaver from [http://www.realmacsoftware.com](http://www.realmacsoftware.com). This tutorial has been designed and written for 4.0, however it is perfectly apt for use with 3.6 as the theme structure and development process is identical.
 
 You'll also need a text editor, TextWrangler from Bare Bones Software ([http://www.barebones.com](http://www.barebones.com)) is free and provides syntax highlighting which makes reading large amounts of code infinitely easier. Alternatively you can use TextEdit which is shipped with the Mac.
